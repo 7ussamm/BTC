@@ -101,10 +101,11 @@ def main():
         else:
             listOfCoins[coin] = (dictOfCurrencies[coin][0:3] + ', ' + dictOfCurrencies[coin][3:])
             
+    btcCurrentChart = 'https://www.tradingview.com/chart/?symbol=BITSTAMP%3ABTCUSD'
     
     msgToBeSent = f"""
     
-                    ********* بقولك يامعلم .. سعر البيتكوين حالياّ *********
+                    ******** بقولك يامعلم .. سعر البيتكوين حالياّ ********
                     //  £ {listOfCoins["EGP"]}  //
                                 
 * Hey there Boss .. Up to date {coinName} price is 
@@ -115,6 +116,11 @@ def main():
     
 * Merhaba Önder .. Güncel {coinName} fiyatı
                     //  $ {listOfCoins["TRY"]}  //
+
+*************************************************
+************ View Live Chart Of BTC ************
+
+{btcCurrentChart}
                 
                     """
     
